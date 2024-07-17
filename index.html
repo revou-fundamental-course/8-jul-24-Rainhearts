@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Kalkulator BMI</h1>
+        <p class="intro">BMI (Body Mass Index) adalah ukuran yang digunakan untuk menilai apakah berat badan seseorang ideal atau tidak berdasarkan tinggi dan berat badannya. Kalkulator ini membantu Anda menghitung BMI dan memberikan interpretasi hasilnya.</p>
+        <form id="bmiForm">
+            <div class="input-group">
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" required>
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" id="weight" required min="1" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="height">Tinggi Badan (cm):</label>
+                <input type="number" id="height" required min="1" step="0.1">
+            </div>
+            <button type="submit">Hitung BMI</button>
+        </form>
+        <div id="result">
+            <div id="bmiValue"></div>
+            <div id="bmiCategory"></div>
+        </div>
+        <div id="explanation"></div>
+    </div>
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
